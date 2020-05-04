@@ -1,7 +1,7 @@
-<button id="increment" (click)="increment()">Increment</button>
-
-<div>Current Count: {{ count$ | async }}</div>
-
-<button id="decrement" (click)="decrement()">Decrement</button>
-
-<button id="reset" (click)="reset()">Reset Counter</button>
+<div class="row text-center my-1">
+  <div class="col">
+    <h3>Current Honor: {{ count$ | async }}</h3>
+    <img src="https://i.imgur.com/VwPGpaX.png" alt="Green Blob" (click)="increment()">
+    <button (click)="addClickPower()">Add Click Power</button>
+  </div>
+</div>

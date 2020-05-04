@@ -1,0 +1,14 @@
+.row{
+  border-right: 1px solid black;
+}
+
+img{
+  margin-top: 5rem;
+  height: 35%;
+  width: auto;
+}
+
+img:active{
+  padding: 15px
+}
+
