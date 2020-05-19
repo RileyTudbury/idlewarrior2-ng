@@ -8,6 +8,8 @@ import { PurchaseablesComponent } from './purchaseables/purchaseables.component'
 import { NavbarComponent } from './navbar/navbar.component';
 import { CurrencyComponent } from './currency/currency.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ProfileComponent } from './profile/profile.component';
     PurchaseablesComponent,
     NavbarComponent,
     CurrencyComponent,
-    ProfileComponent
+    ProfileComponent,
+    PageNotFoundComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
