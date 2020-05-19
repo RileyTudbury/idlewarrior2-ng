@@ -7,13 +7,15 @@ import { currencyReducer } from './store/currency/currency.reducer'
 import { PurchaseablesComponent } from './purchaseables/purchaseables.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CurrencyComponent } from './currency/currency.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PurchaseablesComponent,
     NavbarComponent,
-    CurrencyComponent
+    CurrencyComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

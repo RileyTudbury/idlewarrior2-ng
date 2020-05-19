@@ -6,7 +6,11 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Dashboard <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" routerLink="/">Dashboard <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" routerLink="profile" *ngIf="auth.loggedIn">Profile</a>
     </div>
+    <button class="btn btn-success ml-auto" (click)="auth.login()" *ngIf="!auth.loggedIn">Login</button>
+    <button class="btn btn-danger ml-auto" (click)="auth.logout()" *ngIf="auth.loggedIn">Logout</button>
+
   </div>
 </nav>
