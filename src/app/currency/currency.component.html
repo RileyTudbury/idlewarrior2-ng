@@ -1,9 +1,11 @@
 <div class="row text-center my-1">
   <div class="col">
-    <h3>Current Honor: {{ count$ | async  }}</h3>
+    <div *ngIf="count$ | async as count">
+      <h3>Current Honor: {{ count.honor }}</h3>
+    </div>
     <div>
       <img class="g-blob" src="https://i.imgur.com/VwPGpaX.png" alt="Green Blob" (click)="increment()">
     </div>
-    <button>Add Click Power</button>
+    <button (click)="addClickPower()">Add Click Power</button>
   </div>
 </div>

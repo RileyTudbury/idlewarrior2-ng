@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { select, Store } from '@ngrx/store';
-import { increment, decrement, reset } from '../store/currency/currency.actions'
+import * as CurrencyActions from '../store/currency/currency.actions'
 
 @Component({
   selector: 'app-currency',
@@ -17,15 +17,19 @@ export class CurrencyComponent {
   }
 
   increment() {
-    this.store.dispatch(increment());
+    this.store.dispatch(CurrencyActions.increment());
   }
 
   decrement() {
-    this.store.dispatch(decrement());
+    this.store.dispatch(CurrencyActions.decrement());
   }
 
   reset() {
-    this.store.dispatch(reset());
+    this.store.dispatch(CurrencyActions.reset());
+  }
+
+  addClickPower() {
+    this.store.dispatch(CurrencyActions.addClickPower());
   }
 }
 

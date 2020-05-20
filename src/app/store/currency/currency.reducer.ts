@@ -1,12 +1,22 @@
 import { createReducer, on } from '@ngrx/store';
-import { increment, decrement, reset } from './currency.actions';
+import * as CurrencyActions from './currency.actions';
 
-export const initialState = 0;
+export interface State {
+  honor: number;
+  clickPower: number;
+}
+
+export const initialState: State = {
+  honor: 0,
+  clickPower: 1
+}
 
 const _currencyReducer = createReducer(initialState,
-  on(increment, state => state + 1),
-  on(decrement, state => state - 1),
-  on(reset, state => 0),
+  on(CurrencyActions.increment, state => ({ ...state, honor: state.honor + state.clickPower })),
+  on(CurrencyActions.decrement, state => ({ ...state, honor: state.honor - state.clickPower })),
+  on(CurrencyActions.reset, state => ({ ...initialState })),
+
+  on(CurrencyActions.addClickPower, state => ({ ...state, clickPower: state.clickPower + 1 }))
 );
 
 export function currencyReducer(state, action) {
