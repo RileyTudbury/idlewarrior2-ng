@@ -10,6 +10,7 @@ import { CurrencyComponent } from './currency/currency.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CurrencyComponent,
     ProfileComponent,
     PageNotFoundComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
